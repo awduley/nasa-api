@@ -1,0 +1,38 @@
+.neo-container {
+  position: absolute;
+  right: 4%;
+  top: 6%;
+  opacity: 0;
+  overflow: auto;
+  overflow-y: scroll;
+
+  &.set-show {
+    opacity: 1;
+  }
+}
+
+.neo-info {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 3rem;
+  
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    margin: 1.6rem 0;
+  }
+
+  .link {
+    word-break: break-all;
+  }
+}
+
+.neo-footer {
+  position: sticky;
+  height: 5rem;
+  width: 100%;
+  bottom: 0;
+}
