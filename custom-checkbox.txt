@@ -1,0 +1,24 @@
+How to Create and Style an HTML Custom Checkbox 
+
+
+HTML is the language that every website is built on. Websites simply couldn't exist without it. Today we are going to focus on how to create and style your very own HTML custom checkbox.
+
+Before diving into the example code however, we need to understand that an <input> such as the checkbox won't have any functionality unless it is located within a <form> element. It's important to understand this concept before moving on. 
+
+With that being said, let's discuss forms and inputs in a little more detail below.
+
+HTML Form Controls
+The <form> element is a common yet very important section of a web page or document. It allows the user to enter data into various <input> elements, which can then be submitted and sent to the server to be validated and processed. 
+
+The <input> element specifies an input field for the user to enter data. It is the most important element in a form, and can be displayed in a variety of ways depending on what the type attribute is set to. If this all sounds confusing, don't worry, it will make much more sense in a minute.
+
+The <input> element contains an attribute known as type. The type can be set to one of many different values, which in turn only allows particular actions from the user. For example, if the type of the input is set to email, it will appear just like a basic text input, but HTML has built in validation parameters that only allow correctly formatted email addresses to be input in that field.
+
+Likewise, an input type set to number displays a spinner as well as a numeric keypad in some devices that support dynamic keypads. For a list of all available input types, you can click on the following link: input types
+
+Creating and Styling an HTML Custom Checkbox
+
+For the following tutorial you will need to open your favorite code editor (IDE). Visual Studio Code is easily the most popular choice for many developers, but if you prefer using a different code editor, there are many other great options available such as Atom, Sublime Text, and Brackets.
+
+The custom checkbox will consist of two parts; the HTML to create the checkbox and the CSS to style it and make it look more appealing. The following assumes you have already created a directory on your computer for this project and that you have your code editor open with the basic markup in place to create a page.
+
