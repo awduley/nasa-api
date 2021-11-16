@@ -3,7 +3,7 @@ import './donki.scss';
 
 const Donki = ({ className, apiKey }) => {
 
-  let donkiArray = [];
+  const donkiArray = [];
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);

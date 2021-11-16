@@ -12,8 +12,7 @@ const MarsRover = ({ className, apiKey }) => {
   }
   
   useEffect(() => {
-    // fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${apiKey}`)
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=${apiKey}')
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${apiKey}`)
     .then(res => res.json())
     .then(data => {
       setData(data);
@@ -34,7 +33,6 @@ const MarsRover = ({ className, apiKey }) => {
         !isLoaded ? <p>Loading...</p> :
         <div className="image-container">
           {isLoaded ? <img src={data.photos[randNum].img_src} alt="Random shots from the Mars Rover"/> : <h2>Loading...</h2>}
-          {isLoaded && console.log(data.photos[randNum].img_src)}
         </div>
       }
       <div className="mars-rover-info">

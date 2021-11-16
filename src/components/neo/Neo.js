@@ -4,7 +4,6 @@ import './neo.scss';
 const Neo = ({ className, apiKey }) => {
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState([]);
   const [theDate, setTheDate] = useState('');
   const [neoCount, setNeoCount] = useState(3);
   const [neoArrayState, setNeoArrayState] = useState();
@@ -19,7 +18,6 @@ const Neo = ({ className, apiKey }) => {
     fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${theDate}&api_key=${apiKey}`)
     .then(res => res.json())
     .then(data => {
-      setData(data);
       setIsLoaded(true);
 
       let neoArray = [];

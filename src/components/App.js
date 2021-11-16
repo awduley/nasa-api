@@ -5,11 +5,12 @@ import MarsRover from '../marsrover/MarsRover';
 import Donki from '../donki/Donki';
 import Button from './button/Button';
 
+import background from '../assets/background-cropped.jpg';
+
 import './App.scss';
 
 const App = () => {
 
-  const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
 
   // State for the PotD info
@@ -39,6 +40,12 @@ const App = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center center'
   };
+
+  const appStyleNoPic = {
+    background: `url(${background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center'
+  }
 
   const onSetShow = (e) => {
     switch(e.currentTarget.id) {
@@ -72,12 +79,11 @@ const App = () => {
     .then(res => res.json())
     .then(data => {
       setData(data);
-      setIsLoaded(true);
     });
   }, []);
 
   return (
-    <div className="main-container" style={isLoaded ? appStyle : null}>
+    <div className="main-container" style={data.hurl ? appStyle : appStyleNoPic}>
       <header className="main-heading"><h2>NASA API</h2></header>
       <Clock className={showClock ? 'container clock-outer-container set-show' : 'container clock-outer-container'} />
       <Button id={"set-show-clock"} onSetShow={onSetShow} btnClass={"btn-clock"} btnText={textClock}>
